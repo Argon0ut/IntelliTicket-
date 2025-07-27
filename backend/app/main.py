@@ -2,7 +2,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI, HTTPException
 from starlette import status
 
-from backend.app.api.routes import users, auth
+from backend.app.api.routes import users, auth, tickets
 from backend.app.core.dependencies import db_dependency, user_dependency
 from backend.app.database.session import create_tables
 
@@ -15,6 +15,7 @@ async def lifespan(app: FastAPI):
 app = FastAPI(lifespan=lifespan)
 app.include_router(users.router)
 app.include_router(auth.router)
+app.include_router(tickets.router)
 
 
 @app.get("/", status_code=status.HTTP_200_OK)
