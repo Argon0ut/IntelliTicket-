@@ -8,8 +8,8 @@ from alembic import context
 # Add root to path so "backend" is importable
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 
-from backend.app.core import config as app_config
-from backend.app.database.session import Model  # your declarative base
+from core import config as app_config
+from database.session import Model  # your declarative base
 from urllib.parse import urlparse
 
 ASYNC_DB_URL = app_config.SQLALCHEMY_DATABASE_URL

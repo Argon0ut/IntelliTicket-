@@ -5,12 +5,12 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy import select
 from sqlalchemy.orm import selectinload
 
-from backend.app.api.routes.auth import login_for_access_token
-from backend.app.core.dependencies import db_dependency
-from backend.app.core.security import get_current_user
-from backend.app.models.ticket import Ticket
-from backend.app.models.user import User
-from backend.app.schemas.ticket import CreateTicket, ReadTicket, UpdateTicketStatus
+from api.routes.auth import login_for_access_token
+from core.dependencies import db_dependency
+from core.security import get_current_user
+from models.ticket import Ticket
+from models.user import User
+from schemas.ticket import CreateTicket, ReadTicket, UpdateTicketStatus
 
 router = APIRouter(
     prefix="/tickets",

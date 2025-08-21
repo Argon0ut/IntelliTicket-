@@ -4,10 +4,10 @@ from typing import Annotated
 from fastapi import APIRouter, Depends, HTTPException
 from fastapi.security import OAuth2PasswordRequestForm
 from starlette import status
-from backend.app.core.dependencies import db_dependency
-from backend.app.core.security import bcrypt_context, Token, authenticate_user, create_access_token
-from backend.app.schemas.user import UserCreate
-from backend.app.models.user import User
+from core.dependencies import db_dependency
+from core.security import bcrypt_context, Token, authenticate_user, create_access_token
+from schemas.user import UserCreate
+from models.user import User
 
 router = APIRouter(
     prefix="/auth",

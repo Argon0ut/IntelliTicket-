@@ -3,8 +3,8 @@ from typing import Annotated, AsyncGenerator
 from fastapi import Depends
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.app.core.security import get_current_user
-from backend.app.database.session import async_session
+from core.security import get_current_user
+from database.session import async_session
 
 
 async def get_db() -> AsyncGenerator[AsyncSession, None]:

@@ -1,7 +1,7 @@
 from datetime import datetime
 
 from pydantic import BaseModel
-from backend.app.models.ticket import TicketStatus
+from models.ticket import TicketStatus
 
 
 class UserSchema(BaseModel):

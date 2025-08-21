@@ -1,8 +1,8 @@
 from sqlalchemy.orm import Mapped, mapped_column, relationship
-from backend.app.database.session import Model
+from database.session import Model
 from typing import List
 #
-# from backend.app.models.ticket import Ticket
+# from models.ticket import Ticket
 
 
 class User(Model):

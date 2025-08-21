@@ -9,10 +9,10 @@ from pydantic import BaseModel
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.app.core import config
+from core import config
 
-from backend.app.core.config import SECRET_KEY
-from backend.app.models.user import User
+from core.config import SECRET_KEY
+from models.user import User
 
 
 
